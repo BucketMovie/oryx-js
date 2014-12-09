@@ -1,0 +1,29 @@
+{
+  "name": "Oryx-JS",
+  "version": "1.0.0",
+  "description": "Node module to communicate with an instance of Oryx",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BucketMovie/oryx-js.git"
+  },
+  "keywords": [
+    "Oryx"
+  ],
+  "author": "César Berezowski <c.berezowski@gmail.com> (https://github.com/cesarBere)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BucketMovie/oryx-js/issues"
+  },
+  "homepage": "https://github.com/BucketMovie/oryx-js",
+  "dependencies": {
+    "request": "^2.49.0"
+  },
+  "devDependencies": {
+    "assert": "^1.1.2",
+    "mocha": "^2.0.1"
+  }
+}
