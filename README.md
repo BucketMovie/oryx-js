@@ -12,6 +12,10 @@ See the [Oryx doc](https://github.com/cloudera/oryx/wiki/Installation) for insta
 
 ### Install the module
 
+```
+npm install oryx-js
+```
+
 ### Run your Oryx server and computation instances
 
 Create a file called `oryx.conf` with the following informations : 
