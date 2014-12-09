@@ -1,8 +1,6 @@
 Oryx-JS
 =======
 
-![travis status](https://travis-ci.org/BucketMovie/oryx-js.svg?branch=master)
-
 Basic module to communicate with [Oryx](https://github.com/cloudera/oryx).
 
 Installation & configuration
