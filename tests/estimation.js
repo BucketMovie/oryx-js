@@ -9,7 +9,7 @@ var options = {
 
 var assert = require('assert');
 
-var OryxService = require('../index.js')(options);
+var OryxService = require('../lib/index.js')(options);
 
 var parseCSV = function (csv) {
     var lines = csv.split('\n');

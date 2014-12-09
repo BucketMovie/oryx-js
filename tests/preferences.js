@@ -9,7 +9,7 @@ var options = {
 
 var assert = require('assert');
 
-var OryxService = require('../index.js')(options);
+var OryxService = require('../lib/index.js')(options);
 
 describe('preferences', function () {
     it('should set preference for user 1 and item 404', function (done) {
