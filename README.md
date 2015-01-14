@@ -53,30 +53,26 @@ var OryxService = require('oryx-js')({
 Functions
 ---------
 
-### Recommendation
+### Core
 
-#### get
+#### ready
 
-Parameters
+Parameters 
 
-* int user_id
-* int count
 * func callback(err, res, body)
 
-#### getToMany
+#### refresh
+
+Parameters 
+
+* [func callback(err, res, body)]
+
+
+#### ingest
 
 Parameters
 
-* [int] user_ids
-* int count
-* func callback(err, res, body)
-
-#### getForAnonymous
-
-Parameters
-
-* [{ id: int, val: float }] score_params
-* int count
+* data
 * func callback(err, res, body)
 
 #### getBecause
@@ -88,11 +84,74 @@ Parameters
 * int count
 * func callback(err, res, body)
 
-#### getMostPopular
+#### getMostSurprising
 
 Parameters
 
 * int count
+* func callback(err, res, body)
+
+#### getPopularRepresentativeItems
+
+Parameters
+
+* func callback(err, res, body)
+
+#### getMostActiveUsers
+
+Parameters
+
+* int count
+* int offset
+* func callback(err, res, body)
+
+#### getMostPopularItems
+
+Parameters
+
+* int count
+* int offset
+* func callback(err, res, body)
+
+#### getAllUsers
+
+Parameters
+
+* func callback(err, res, body)
+
+#### getAllItems
+
+Parameters
+
+* func callback(err, res, body)
+
+### Recommendation
+
+#### get
+
+Parameters
+
+* int user_id
+* int count
+* int offset
+* func callback(err, res, body)
+
+#### getToMany
+
+Parameters
+
+* [int] user_ids
+* int count
+* int offset
+* func callback(err, res, body)
+
+#### getForAnonymous
+
+Parameters
+
+* [{ id: int, val: float }] score_params
+* int count
+* int offset
 * func callback(err, res, body)
 
 ### Similiraty
@@ -103,6 +162,8 @@ Parameters
 
 * [int] item_ids
 * int count
+* int offset
+* func callback(err, res, body)
 
 #### getToItem
 
@@ -151,33 +212,11 @@ Parameters
 * int item_id
 * [func callback(err, res, body)]
 
-### Basic
-
-#### ready
-
-Parameters 
-
-* func callback(err, res, body)
-
-#### refresh
-
-Parameters 
-
-* [func callback(err, res, body)]
-
-
-#### ingest
-
-Parameters
-
-* data
-* func callback(err, res, body)
-
 DEVELOPMENT
 ------------
 
 ### Info
-The code was developped and tested with *Oryx 0.3.0*
+The code was developped and tested with *Oryx 0.3.0*, functions from *Oryx 1.x* were added but not tested for now.
 
 ### TODO
 
@@ -187,5 +226,4 @@ Handle authentication, none for now
 
 #### Data format
 
-For now, data is received only as a `csv` string, `json` should be included in Oryx' next version and support added to the bundle.
-Also make the module parse the `csv` data before sending it to the callback.
+Handle `csv`/ `json` parsing 

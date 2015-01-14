@@ -28,7 +28,7 @@ var parseCSV = function (csv) {
 
 describe('similarity', function () {
     it('should get 10 similarity for item 812', function (done) {
-        OryxService.similarity.get([812], 10, function (err, res, body) {
+        OryxService.similarity.get([812], 10, 0, function (err, res, body) {
             assert(!err);
             var data = parseCSV(body);
             assert.equal(data.length, 10);

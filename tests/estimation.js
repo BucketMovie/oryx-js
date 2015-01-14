@@ -34,8 +34,14 @@ describe('estimation', function () {
 
     it('should get anonymous estimation for items 8587', function (done) {
         var scores = [
-            { id: 812, val: .7 },
-            { id: 7443, val: .2 }
+            {
+                id: 812,
+                val: .7
+            },
+            {
+                id: 7443,
+                val: .2
+            }
         ];
 
         OryxService.estimation.getForAnonymous(8587, scores, function (err, res, body) {
