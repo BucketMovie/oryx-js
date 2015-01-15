@@ -1,6 +1,6 @@
 {
   "name": "oryx-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node module to communicate with an instance of Oryx",
   "main": "lib/index.js",
   "scripts": {
