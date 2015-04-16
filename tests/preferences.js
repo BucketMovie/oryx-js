@@ -27,4 +27,19 @@ describe('preferences', function () {
             done();
         });
     });
+    it('should set empty preference for user 1 and item 404', function (done) {
+        OryxService.preference.set(1, 404, function (err, res, body) {
+            assert(!err);
+            assert.equal(body, "");
+            done();
+        });
+    });
+
+    it('should remove preference for user 1 and item 404', function (done) {
+        OryxService.preference.delete(1, 404, function (err, res, body) {
+            assert(!err);
+            assert.equal(body, "");
+            done();
+        });
+    });
 });

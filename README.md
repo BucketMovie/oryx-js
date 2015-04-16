@@ -201,7 +201,7 @@ Parameters
 
 * int user_id
 * int item_id
-* float value
+* [float value]
 * [func callback(err, res, body)]
 
 #### delete
