@@ -4,7 +4,9 @@ var options = {
     host: 'localhost',
     port: '8091',
     user: null,
-    password: null
+    password: null,
+    user_id: '',
+    user_total_items: 10
 };
 
 var assert = require('assert');
@@ -60,4 +62,13 @@ describe('core', function () {
             done();
         });
     });
+    
+    it('Should get the known items of a user', function (done) {
+        OryxService.core.getKnownItems(options.user_id, function (err, res, body) {
+            assert(!err);
+            var data = parseCSV(body);
+            assert.equal(data.length, options.user_total_items);
+            done();
+        });
+    })
 });

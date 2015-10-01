@@ -125,6 +125,13 @@ Parameters
 
 * func callback(err, res, body)
 
+#### getKnownItems
+
+Parameters
+
+* int user_id
+* func callback(err, res, body)
+
 ### Recommendation
 
 #### get
